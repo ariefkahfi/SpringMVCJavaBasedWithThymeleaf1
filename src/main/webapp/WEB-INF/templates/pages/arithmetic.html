@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Arithmetic Page using Thymeleaf</title>
+</head>
+<body>
+
+    <div th:with="result= (${one} / 2)  + 2">
+        <div th:text="|The result is ${result}|">result is unavailable</div>
+    </div>
+
+    <div th:with="resultTwo = 2 + 2.25">
+        <div th:text="|The result for resultTwo is ${resultTwo}|">resultTwo is NA</div>
+    </div>
+
+    <div>
+        <div th:text="|Result is : ${true == false}|"></div>
+        <div th:text="|Result true or false is : ${true or false}|"></div>
+    </div>
+
+    <div>
+        <div><a th:href="@{/conditional}">Conditional page</a></div>
+    </div>
+
+</body>
+</html>

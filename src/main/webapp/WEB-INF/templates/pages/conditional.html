@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Conditional Expressions and Default Expressions using</title>
+</head>
+<body>
+
+    <!--conditional expression -->
+    <div th:text="${admin}? 'You\'re an admin' : 'You aren\'t an admin '"></div>
+
+    <!--conditional expression omitted else-->
+    <div th:text="${isChef}? 'You chef now !!! '"></div>
+
+
+    <!--elvis operator-->
+    <div th:object="${putro}">
+        <ul>
+            <li th:text="*{id <= 0}? 'your id valid' : 'Your id invalid !!!' "></li>
+            <li th:text="|Your username is : *{name}|"></li>
+        </ul>
+    </div>
+
+    <div th:object="${zack}">
+        <ul>
+            <li th:text="*{name}?: 'username not set'"></li>
+            <li th:text="*{id <= 0 }? 'valid ID ' : 'invalid ID'"></li>
+        </ul>
+    </div>
+
+
+
+</body>
+</html>

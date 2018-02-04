@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello Thymeleaf</title>
+</head>
+<body>
+
+    <!--appending text using (+) operator in thymeleaf-->
+    <div th:text="'The message is : ' + ${msg}">No value</div>
+
+
+    <!--appending text using literal substitutions (|)-->
+    <div th:text="|Your messsage is ${msg2}|">No value for msg2</div>
+
+
+    <div>
+        <a th:href="@{/add}">Arithmetic Page (/add)</a>
+    </div>
+
+
+</body>
+</html>
